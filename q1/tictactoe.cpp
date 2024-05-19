@@ -65,14 +65,23 @@ int main(int argc, char* argv[]) {
     // Play the game
     for (size_t i = 1; i < 9; ++i) {
         int move;
-        std::cout << "Player " << currentPlayer << ", enter your move (1-9): ";
-        std::cin >> move;
-        move -= 1; // Convert to 0-based index
-
-        if (!isValidMove(board, move)) {
+        if(currentPlayer == 'O'){
+            std::cout << "Player " << currentPlayer << ", enter your move (1-9): ";
+            std::cin >> move;
+            move -= 1; // Convert to 0-based index
+        } else {
+            int j = 0;
+           while(board[input[j]-'1']!=' ' && (size_t)j < input.size()){
+                j++;
+           }
+            move = input[j]-'1';
+            
+        }
+        if (currentPlayer=='O'&&!isValidMove(board, move)) {
             std::cerr << "Invalid move. Try again.\n";
             --i; // Repeat this turn
             continue;
+            
         }
 
         board[move] = currentPlayer;

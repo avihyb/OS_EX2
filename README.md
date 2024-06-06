@@ -19,7 +19,7 @@ This repository contains solutions for Assignment 2 of the Operating Systems cou
 - File: `mynetcat.cpp` `tictactoe.cpp`
 - Description: This folder contains the solution for Question 3. It implements [insert brief description of the question here].
 
-### Question 4: mynetcat (PART III)
+### Question 3.5:
 
 - File: `.cpp`
 - Description: This folder contains the solution for Question 4. It implements [insert brief description of the question here].
